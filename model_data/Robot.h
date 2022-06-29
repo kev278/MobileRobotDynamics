@@ -5,12 +5,14 @@ A single parametric constructor for data memebers
 #ifndef _ROBOT_
 #define _ROBOT_
 
+#include <vector>
+
 template <class T>
 class Robot
 {
     public:
         // Parametric Constructor to initialize robot parameters
-        Robot(T modelParameters);
+        Robot(std::vector<T> modelParameters);
 
     private:
         T wheelToCenter;
