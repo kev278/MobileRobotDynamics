@@ -1,3 +1,7 @@
+/*
+Implementation of Robot Class
+*/
+
 #include "Robot.h"
 
 // Initializer list for all robot parameters
