@@ -34,4 +34,6 @@ class Robot
         T Cw;
 };
 
-#endif
+#include "Robot.cpp"
+
+#endif //_ROBOT_
