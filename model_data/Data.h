@@ -18,12 +18,14 @@ class Data
     public:
         Data() = default;
         std::string readFileIntoString(const std::string& path);
-        std::map<int, std::vector<std::string>> getFileContent();
-        void setModelParameters(std::vector<std::string> csv_contents);
+        void getFileContent();
+        void setModelParameters();
 
     private:
         std::map<int, std::vector<std::string>> csv_contents;
         std::vector<T> modelParameters;  
 };
 
-#endif
+#include "Data.cpp"
+
+#endif //_DATA_
