@@ -57,4 +57,11 @@ void Data<T>::Data::setModelParameters()
     }
 }
 
+// Getter for model parameters
+template<class T>
+std::vector<T> Data<T>::Data::getParams()
+{
+    return modelParameters;
+}
+
 #endif //_DATACPP_
