@@ -2,10 +2,13 @@
 Implementation of Data Class
 */
 
-#include <Data.h>
+#ifndef _DATACPP_
+#define _DATACPP_
+
+#include "Data.h"
 
 /*
-Stnadard implementation of functions to get data from a csv file
+Stnadard implementation of functions to get data from a CSV file
 */
 template<class T>
 std::string Data<T>::Data::readFileIntoString(const std::string& path) 
@@ -17,7 +20,7 @@ std::string Data<T>::Data::readFileIntoString(const std::string& path)
     }
 
 template<class T>        
-std::map<int, std::vector<std::string>> Data<T>::Data::getFileContent()
+void Data<T>::Data::getFileContent()
 {
     std::string filename("parameters.csv");
     std::string file_contents = readFileIntoString(filename);;
@@ -39,19 +42,19 @@ std::map<int, std::vector<std::string>> Data<T>::Data::getFileContent()
             items.clear();
             counter += 1;
         }
-
-    return csv_contents;
 }
 
 // Converts csv data to a double and sets modelParameter member of the class
 template<class T>
-void Data<T>::Data::setModelParameters(std::vector<std::string> csv_contents)
+void Data<T>::Data::setModelParameters()
 {
     modelParameters.clear();
-    modelParamaters.push_back(std::stod(csv_contents[0][1], nullptr));
+    modelParameters.push_back(std::stod(csv_contents[0][1], nullptr));
     int sizeOfData = csv_contents.size();
     for(int i = 0; i < sizeOfData; i++)
     {
-        modelParamaters.push_back(std::stod(csv_contents[i][1], nullptr));
+        modelParameters.push_back(std::stod(csv_contents[i][1], nullptr));
     }
 }
+
+#endif //_DATACPP_
