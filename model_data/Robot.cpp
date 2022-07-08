@@ -1,6 +1,8 @@
 /*
 Implementation of Robot Class
 */
+#ifndef _ROBOTCPP_
+#define _ROBOTCPP_
 
 #include "Robot.h"
 
@@ -14,3 +16,5 @@ Robot<T>::Robot(std::vector<T> modelParameters)
   {
 
   }
+
+  #endif //_ROBOTCPP_
