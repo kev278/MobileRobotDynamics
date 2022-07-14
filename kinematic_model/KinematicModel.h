@@ -1,14 +1,13 @@
 #ifndef _KINEMATICMODEL_
 #define _KINEMATICMODEL_
 
-#include <Robot.h>
-
+#include "Robot.h"
 
 class KinematicModel : public Robot
 {
     public:
-        void calcLinearVel(Robot::wheelToCenter, double velRobot, double velNormalRobot, double omegaRobot);
-        void calAngularVel();
+        void calcLinearVel(double wheelToCenter, double velRobot, double velNormalRobot, double omegaRobot);
+        void calAngularVel(double wheelRadius);
         
     private:
         double linVel0;
