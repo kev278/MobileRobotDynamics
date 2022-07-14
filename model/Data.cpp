@@ -23,7 +23,7 @@ std::string Data::readFileIntoString(const std::string& path)
 void Data::getFileContent()
 {
     std::string filename("parameters.csv");
-    std::string file_contents = readFileIntoString(filename);;
+    std::string file_contents = readFileIntoString(filename);
     char delimiter{','};
 
     std::istringstream sstream(file_contents);
