@@ -15,7 +15,7 @@ class Robot
         // Parametric constructor to initialize robot parameters
         Robot(std::vector<double> modelParameters);
 
-    private:
+    protected:
         double wheelToCenter;
         double wheelRadius;
         double gearBoxReduction;
