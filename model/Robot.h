@@ -10,7 +10,9 @@ A single parametric constructor for data memebers
 class Robot
 {
     public:
-        // Parametric Constructor to initialize robot parameters
+        // Default constructor
+        Robot() = default;
+        // Parametric constructor to initialize robot parameters
         Robot(std::vector<double> modelParameters);
 
     private:
