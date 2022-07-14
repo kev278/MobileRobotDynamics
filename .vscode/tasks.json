@@ -9,9 +9,7 @@
                 "-g",
                 "${file}",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "-I", 
-                "C:\\Users\\ACER\\Desktop\\For Readme\\mobile-robot-dynamics\\model_data"
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
                 "cwd": "${fileDirname}"
