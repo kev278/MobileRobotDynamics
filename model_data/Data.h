@@ -20,11 +20,11 @@ class Data
         std::string readFileIntoString(const std::string& path);
         void getFileContent();
         void setModelParameters();
-        std::vector<T> getParams();
+        std::vector<double> getParams();
 
     private:
         std::map<int, std::vector<std::string>> csv_contents;
-        std::vector<T> modelParameters;  
+        std::vector<double> modelParameters;  
 };
 
 #include "Data.cpp"

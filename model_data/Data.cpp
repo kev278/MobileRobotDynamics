@@ -10,8 +10,8 @@ Implementation of Data Class
 /*
 Stnadard implementation of functions to get data from a CSV file
 */
-template<class T>
-std::string Data<T>::Data::readFileIntoString(const std::string& path) 
+
+std::string Data::readFileIntoString(const std::string& path) 
     {
         auto ss = std::ostringstream{};
         std::ifstream input_file(path);
@@ -19,8 +19,8 @@ std::string Data<T>::Data::readFileIntoString(const std::string& path)
         return ss.str();
     }
 
-template<class T>        
-void Data<T>::Data::getFileContent()
+       
+void Data::getFileContent()
 {
     std::string filename("parameters.csv");
     std::string file_contents = readFileIntoString(filename);;
@@ -45,8 +45,7 @@ void Data<T>::Data::getFileContent()
 }
 
 // Converts csv data to a double and sets modelParameter member of the class
-template<class T>
-void Data<T>::Data::setModelParameters()
+void Data::setModelParameters()
 {
     modelParameters.clear();
     modelParameters.push_back(std::stod(csv_contents[0][1], nullptr));
@@ -58,8 +57,7 @@ void Data<T>::Data::setModelParameters()
 }
 
 // Getter for model parameters
-template<class T>
-std::vector<T> Data<T>::Data::getParams()
+std::vector<double> Data::getParams()
 {
     return modelParameters;
 }
