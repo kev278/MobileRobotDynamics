@@ -13,11 +13,11 @@ int main()
 
     // Task 2: Initialize a Robot
     std::vector<double> modelParams = data.getParams();
-    Robot robot(modelParams);
-    std::cout << "Check 2" << std::endl;
 
     // Task 3: Initialize Kinematic Model
-    KinematicModel kinematicModel;
-    std::cout << "Check 3" << std::endl;
+    KinematicModel kinematicModel(modelParams);
+    std::cout << "Check 2" << std::endl;
 
+    // Task 4: Calcuate Velocities
+    
 }
