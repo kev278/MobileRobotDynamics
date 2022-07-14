@@ -3,7 +3,6 @@
 
 #include "KinematicModel.h"
 
-template<class T>
 class DynamicModel : public KinematicModel
 {
     public:
