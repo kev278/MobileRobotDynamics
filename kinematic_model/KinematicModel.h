@@ -3,20 +3,20 @@
 
 #include <Robot.h>
 
-template<class T>
+
 class KinematicModel : public Robot
 {
     public:
-        void calcLinearVel(Robot<T>::Robot::wheelToCenter, T velRobot, T velNormalRobot, T omegaRobot);
+        void calcLinearVel(Robot::wheelToCenter, double velRobot, double velNormalRobot, double omegaRobot);
         void calAngularVel();
         
     private:
-        T linVel0;
-        T linVel1;
-        T linVel2;
-        T angVel0;
-        T angVel1;
-        T angVel2;
+        double linVel0;
+        double linVel1;
+        double linVel2;
+        double angVel0;
+        double angVel1;
+        double angVel2;
 };
 
 #endif
