@@ -6,10 +6,13 @@
 class KinematicModel : public Robot
 {
     public:
-        void calcLinearVel(double wheelToCenter, double velRobot, double velNormalRobot, double omegaRobot);
-        void calAngularVel(double wheelRadius);
+        KinematicModel(std::vector<double> modelParams);
+        void calcVel(double velRobot, double velNormalRobot, double omegaRobot);
+        void calcLinearVel(double velRobot, double velNormalRobot, double omegaRobot);
+        void calcAngularVel();
         
     private:
+
         double linVel0;
         double linVel1;
         double linVel2;
@@ -17,5 +20,7 @@ class KinematicModel : public Robot
         double angVel1;
         double angVel2;
 };
+
+#include "KinematicModel.cpp"
 
 #endif
