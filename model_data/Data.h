@@ -12,7 +12,7 @@ Get Data from csv file and set Model Parameters
 #include <sstream>
 #include <map>
 
-template<class T>
+
 class Data
 {
     public:
