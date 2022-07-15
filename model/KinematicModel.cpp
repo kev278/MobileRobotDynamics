@@ -26,9 +26,9 @@ void KM::calcLinearVel(double velRobot, double velNormalRobot, double omegaRobot
     stateVec << velRobot, velNormalRobot, omegaRobot;
     Eigen::MatrixXd wheelLinearVel(3, 1);
     wheelLinearVel = Rotation * stateVec;
-    KM::linVel0 = wheelLinearVel(1, 1);
-    KM::linVel1 = wheelLinearVel(2, 1);
-    KM::linVel2 = wheelLinearVel(3, 1);
+    KM::linVel0 = wheelLinearVel(0, 0);
+    KM::linVel1 = wheelLinearVel(1, 0);
+    KM::linVel2 = wheelLinearVel(2, 0);
 }
 
 void KM::calcAngularVel()
