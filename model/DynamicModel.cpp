@@ -58,9 +58,9 @@ void DynamicModel::calcStateDot(double velRobot, double velNormalRobot, double o
 
     Eigen::MatrixXd stateVecDot(3, 1);
     stateVecDot = A * stateVec + B * U + K * signX;
-    accV = stateVecDot.coeff(1, 1);
-    accVn = stateVecDot.coeff(2, 1);
-    accAng = stateVecDot.coeff(3, 1);
+    accV = stateVecDot.coeff(0, 0);
+    accVn = stateVecDot.coeff(1, 0);
+    accAng = stateVecDot.coeff(2, 0);
 
 }
 
