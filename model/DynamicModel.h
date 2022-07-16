@@ -7,7 +7,8 @@ class DynamicModel : public KinematicModel
 {
     public:
         DynamicModel(std::vector<double> modelParams);
-        Eigen::MatrixXd calcStateDot(double velRobot, double velNormalRobot, double omegaRobot, double u1, double u2, double u3);
+        void calcStateDot(double velRobot, double velNormalRobot, double omegaRobot, double u1, double u2, double u3);
+        std::vector<double> getStateVecDot();
         
 
     private:
