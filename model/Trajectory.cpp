@@ -51,11 +51,13 @@ void Trajectory::setTraj()
     velY.clear();
     omega.clear();
 
-    modelParameters.push_back(std::stod(csv_contents[0][1], nullptr));
-    int sizeOfData = csv_contents.size();
-    for(int i = 0; i < sizeOfData; i++)
+    //velX.push_back(std::stod(csv_contents[0][1], nullptr));
+    int sizeOfData = csv_contents[0].size();
+    for(int i = 1; i < sizeOfData; i++)
     {
-        modelParameters.push_back(std::stod(csv_contents[i][1], nullptr));
+        velX.push_back(std::stod(csv_contents[0][i], nullptr));
+        velY.push_back(std::stod(csv_contents[1][i], nullptr)); 
+        omega.push_back(std::stod(csv_contents[2][i], nullptr));
     }
 }
 
