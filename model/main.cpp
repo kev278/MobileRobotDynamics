@@ -3,6 +3,7 @@
 #include "Data.h"
 #include <iostream>
 #include "DynamicModel.h"
+#include "Output.h"
 
 int main()
 {
@@ -30,9 +31,23 @@ int main()
     Trajectory trajectory;
     trajectory.getFileContent();
     trajectory.setTraj();
+
     std::vector<double> velX = trajectory.getX();
     std::vector<double> velY = trajectory.getY();
     std::vector<double> omega = trajectory.getOmega();
+    
+    // Set the inputs (motor voltages)
+    double u1{2}, u2{2}, u3{2};
+    int sizeOfData = velX.size();
+    std::vector<std::vector<double>> stateVecDot;
+    for(int i = 0; i < sizeOfData; i++)
+    {
+        dynamicModel.calcStateDot(velX[i], velY[i], omega[i], u1, u2, u3);
+        stateVecDot.push_back(dynamicModel.getStateVecDot());
+    }
     std::cout << "Check 5" << std::endl;
 
+    // Task 6: Write Acceleration Trajectories to a CSV File
+    Output output(stateVecDot);
+    std::cout << "Check 6" << std::endl;
 }
