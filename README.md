@@ -1,5 +1,7 @@
 # 3-Wheeled Omni-Directional Robot Dynamics
 
+## Please use the **mixed-folders branch** to run the code
+
 ## Overview
 In this project, I have implemented a working Kinematic Model and Dynamic Model. All model parameters are extracted from a CSV and can be changed based on your model. The input to the model is a fifth order (quintic) position trajectory that is generated from a MATLAB script. The Models can be found in this [paper](https://www.researchgate.net/publication/256089847_Dynamical_Models_for_Omni-directional_Robots_with_3_and_4_Wheels). The dynamic model is represented as a State-Space Model and can be used for implementung control strategies. Multiple control strategies are implemented in [here](https://github.com/kev278/control-strategies). You will simply have to change the State-Space Model to implement the control strategies.
 
@@ -23,12 +25,18 @@ The [paper](https://www.researchgate.net/publication/256089847_Dynamical_Models_
 <br><br>
 
 - **Dynamic Model**: <br>
-A State-Space representation of the Dynamic Model is implemented in C++. The model parameters used are the ones provided in the paper. You can change the parameters in the CSV file to implement your model.
+A State-Space representation of the Dynamic Model is implemented in C++.
 <br><br>
 
 ---
 ## Usage
 
-This repo consists of Header files only. You can implement your model by creating your own main.cpp file. Ths repo is itended to be used as a starting point for implementing your controls. A sample main.cpp file is providedin each foler. You can run the files to check the sample output.
+**Step 1:** The parameters.csv file contains all the model parameters. You can change these as per your model. <br />
+<br />
+**Step 2:** The velocityTraj.csv contains velocity trajectories in the world frame. You can add any trajectory that you need to follow. <br />
+<br />
+**Step 3:** Run the main.cpp file. <br />
+<br />
+**Step 4:** You can check the output robot acceleration trajectories in the output.csv files. We get these trajectories fro the state space model.
 	
 ---
