@@ -31,9 +31,12 @@ A State-Space representation of the Dynamic Model is implemented in C++.
 ---
 ## Usage
 
-**Step 1:** The parameters.csv file contains all the model parameters. You can change these as per your model.
-**Step 2:** The velocityTraj.csv contains velocity trajectories in the world frame. You can add any trajectory that you need to follow.
-**Step 3:** Run the main.cpp file
+**Step 1:** The parameters.csv file contains all the model parameters. You can change these as per your model. <br />
+<br />
+**Step 2:** The velocityTraj.csv contains velocity trajectories in the world frame. You can add any trajectory that you need to follow. <br />
+<br />
+**Step 3:** Run the main.cpp file. <br />
+<br />
 **Step 4:** You can check the output robot acceleration trajectories in the output.csv files. We get these trajectories fro the state space model.
 	
 ---
